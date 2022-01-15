@@ -1,0 +1,26 @@
+{
+  "name": "thejourney",
+  "version": "1.0.0",
+  "description": "a page about my goal to become a front end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmaNGagen/theJourney.git"
+  },
+  "author": "Emma (Gagen)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmmaNGagen/theJourney/issues"
+  },
+  "homepage": "https://github.com/EmmaNGagen/theJourney#readme",
+  "dependencies": {
+    "parcel": "^2.2.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.2.0"
+  }
+}
