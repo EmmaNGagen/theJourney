@@ -160,21 +160,23 @@ body {
 }
 @media only screen and (min-width: 868px) {
   .hero-wrapper {
-    background: url(hero_backgound.cc4502ac.png);
+    background: url(hero_wrapper.5ad79124.png);
     background-repeat: no-repeat;
     background-size: contain, cover;
     height: 800px;
     display: flex;
   }
   .hero-wrapper .div-wrapper {
-    padding-top: 48px;
+    padding-top: 18px;
     padding-left: 50px;
   }
   .hero-wrapper .div-wrapper .wrapper-text-one {
+    font-weight: 400;
     font-size: 50px;
     margin: 0;
   }
   .hero-wrapper .div-wrapper .typeText {
+    font-style: italic;
     font-size: 30px;
   }
 

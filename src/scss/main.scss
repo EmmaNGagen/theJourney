@@ -9,19 +9,21 @@ body {
 }
 @media only screen and (min-width: 868px) {
   .hero-wrapper {
-    background: url("../assets/hero_backgound.png");
+    background: url("../assets/hero_wrapper.png");
     background-repeat: no-repeat;
     background-size: contain, cover;
     height: 800px;
     display: flex;
     .div-wrapper {
-      padding-top: 48px;
+      padding-top: 18px;
       padding-left: 50px;
       .wrapper-text-one {
+        font-weight: 400;
         font-size: 50px;
         margin: 0;
       }
       .typeText {
+        font-style: italic;
         font-size: 30px;
       }
     }
