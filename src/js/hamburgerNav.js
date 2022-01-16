@@ -1,6 +1,6 @@
-window.onload = function () {
-  hamburgerBar();
-};
+//window.onload = function () {
+// hamburgerBar();
+//};
 
 export function hamburgerBar() {
   let hamburger = document.querySelector(".hamburger");

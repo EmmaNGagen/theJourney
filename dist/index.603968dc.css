@@ -1,10 +1,3 @@
-html,
-body {
-  margin: 0;
-  background-color: black;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
 @media only screen and (min-width: 868px) {
   header {
     background-color: black;
@@ -14,7 +7,6 @@ body {
     z-index: 1000;
     height: 80px;
     top: -5px;
-    box-shadow: 0px 1px 3px 2px rgba(43, 43, 43, 0.214);
   }
   header .logo {
     color: white;
@@ -25,16 +17,20 @@ body {
     display: flex;
     padding-top: 10px !important;
     gap: 10px;
-    padding-right: 20px;
+    padding-right: 66px;
   }
-  header .navbar .nav-link {
+  header .navbar .navBtn {
+    padding: 9px;
+    list-style: none;
+  }
+  header .navbar .navBtn .nav-link {
     float: left;
     display: block;
     text-align: right;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 300;
+    font-size: 19px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     text-decoration: none;
     color: white;
   }
@@ -71,15 +67,7 @@ body {
     display: none;
     cursor: pointer;
   }
-
-  .hero-wrapper {
-    background: url(hero_backgound.cc4502ac.png);
-    background-repeat: no-repeat;
-    background-size: contain, cover;
-    height: 800px;
-  }
 }
-
 @media only screen and (max-width: 868px) {
   header {
     background-color: black;
@@ -140,7 +128,9 @@ body {
     margin: 16px 0;
   }
   .navbar .navBtn .nav-link {
+    font-weight: 400;
     font-size: 40px;
+    text-transform: uppercase;
     text-decoration: none;
     color: white;
   }
@@ -159,6 +149,44 @@ body {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
+  }
+}
+html,
+body {
+  margin: 0;
+  background-color: black;
+  font-family: "Work Sans", sans-serif;
+  color: white;
+}
+@media only screen and (min-width: 868px) {
+  .hero-wrapper {
+    background: url(hero_backgound.cc4502ac.png);
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    height: 800px;
+    display: flex;
+  }
+  .hero-wrapper .div-wrapper {
+    padding-top: 48px;
+    padding-left: 50px;
+  }
+  .hero-wrapper .div-wrapper .wrapper-text-one {
+    font-size: 50px;
+    margin: 0;
+  }
+  .hero-wrapper .div-wrapper .typeText {
+    font-size: 30px;
+  }
+
+  .blinking-cursor {
+    user-select: none;
+    animation: blink 1s steps(2, start) infinite;
+  }
+
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
   }
 }
 /*# sourceMappingURL=index.603968dc.css.map */

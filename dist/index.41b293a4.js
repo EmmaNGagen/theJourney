@@ -520,18 +520,20 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"iWSTb":[function(require,module,exports) {
 var _hamburgerNav = require("./hamburgerNav");
+var _typeText = require("./typeText");
 window.onload = function() {
     _hamburgerNav.hamburgerBar();
+    _typeText.typeText();
 };
 
-},{"./hamburgerNav":"3YEvC"}],"3YEvC":[function(require,module,exports) {
+},{"./hamburgerNav":"3YEvC","./typeText":"3gl7O"}],"3YEvC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+//window.onload = function () {
+// hamburgerBar();
+//};
 parcelHelpers.export(exports, "hamburgerBar", ()=>hamburgerBar
 );
-window.onload = function() {
-    hamburgerBar();
-};
 function hamburgerBar() {
     let hamburger = document.querySelector(".hamburger");
     let navBar = document.querySelector(".navbar");
@@ -576,6 +578,50 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["lcWGR","iWSTb"], "iWSTb", "parcelRequire92c3")
+},{}],"3gl7O":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "typeText", ()=>typeText
+);
+async function typeText() {
+    const node = document.querySelector("#type-text");
+    await sleep(1000);
+    node.innerText = "";
+    await node.type("a ");
+    while(true){
+        await node.type("Front End Develop student!");
+        await sleep(2000);
+        await node.delete("Front End Develop student!");
+        await node.type("Designer!");
+        await sleep(2000);
+        await node.delete("Designer!");
+    }
+}
+const sleep = (time)=>new Promise((resolve)=>setTimeout(resolve, time)
+    )
+;
+class TypeAsync extends HTMLSpanElement {
+    get typeInterval() {
+        const randomMs = 100 * Math.random();
+        return randomMs < 50 ? 10 : randomMs;
+    }
+    async type(text) {
+        for (let character of text){
+            this.innerText += character;
+            await sleep(this.typeInterval);
+        }
+    }
+    async delete(text) {
+        for (let character of text){
+            this.innerText = this.innerText.slice(0, this.innerText.length - 1);
+            await sleep(this.typeInterval);
+        }
+    }
+}
+customElements.define("type-async", TypeAsync, {
+    extends: "span"
+});
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["lcWGR","iWSTb"], "iWSTb", "parcelRequire92c3")
 
 //# sourceMappingURL=index.41b293a4.js.map
